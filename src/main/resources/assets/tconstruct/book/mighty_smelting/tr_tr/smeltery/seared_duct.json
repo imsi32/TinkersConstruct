@@ -1,0 +1,14 @@
+{
+  "title": "Kararmış Doldurucu",
+  "item": "tconstruct:seared_duct",
+  "text": [
+    {
+      "text": "Kararmış doldurucu kallama ocağından belirli bir sıvıyı çıkarma yoludur. Sıvı, doldurucunun süzgeç yuvasına konan sıvıyla tümüyle dolu olan bakır teneke kutuya veya kovaya göre seçilir.",
+      "paragraph": true
+    },
+	{
+      "text": "Süzülmesi için seçtiğiniz sıvı doldurucunun ortasında gösterilecek.",
+      "paragraph": true
+    }
+	]
+}
