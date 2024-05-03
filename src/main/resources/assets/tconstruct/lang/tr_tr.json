@@ -1003,7 +1003,7 @@
   "gui.tconstruct.melting.fuel.temperature": "Sıcaklık: %s°C",
   "gui.tconstruct.melting.fuel.invalid": "Geçersiz ergimiş yakıt!",
 
-  "gui.tconstruct.duct": "Doldurucu",
+  "gui.tconstruct.duct": "Boşaltaç",
 
   "multiblock.tconstruct.generic.no_attempt": "Yapı algılaması geri dönmedi, bu çoğunlukla moddan kaynaklı bir hata",
   "multiblock.tconstruct.generic.not_loaded": "Yapı yüklenen alanın dışında, bu çoğunlukla moddan kaynaklı bir hata",
@@ -1108,7 +1108,7 @@
 
   "block.tconstruct.seared_drain": "Kararmış Akıtaç",
   "block.tconstruct.seared_drain.tooltip": "Kallama Ocağı sıvı girişi ve çıkışı",
-  "block.tconstruct.seared_duct": "Kararmış Doldurucu",
+  "block.tconstruct.seared_duct": "Kararmış Boşaltaç",
   "block.tconstruct.seared_duct.tooltip": "Bakır teneke kutular ya da kovalar aracılığıyla süzülmüş Kallama Ocağı sıvı girişi ve çıkışı",
   "block.tconstruct.seared_chute": "Kararmış Oluk",
   "block.tconstruct.seared_chute.tooltip": "Kallama Ocağı eşya girişi ve çıkışı",
@@ -1184,7 +1184,7 @@
 
   "block.tconstruct.scorched_drain": "Kavrulmuş Akıtaç",
   "block.tconstruct.scorched_drain.tooltip": "Dökümevi sıvı girişi ve çıkışı",
-  "block.tconstruct.scorched_duct": "Kavrulmuş Doldurucu",
+  "block.tconstruct.scorched_duct": "Kavrulmuş Boşaltaç",
   "block.tconstruct.scorched_duct.tooltip": "Bakır teneke kutular ya da kovalar aracılığıyla süzülmüş Dökümevi sıvı girişi ve çıkışı",
   "block.tconstruct.scorched_chute": "Kavrulmuş Oluk",
   "block.tconstruct.scorched_chute.tooltip": "Dökümevi eşya girişi ve çıkışı",
@@ -2088,7 +2088,7 @@
   "modifier.tconstruct.silky": "İpeksi",
   "modifier.tconstruct.silky.flavor": "İpek kadar düz!",
   "modifier.tconstruct.silky.description": "Çıkarılan bloklardan düşen eşyalar olağan olanların yerine kendileridir",
-  "modifier.tconstruct.autosmelt": "Kendiliğinden Ergitme",
+  "modifier.tconstruct.autosmelt": "Kendiliğinden Kallama",
   "modifier.tconstruct.autosmelt.flavor": "Netherın ateşleri aracının içinde!",
   "modifier.tconstruct.autosmelt.description": "Araç düşen eşyaları kendiliğinden kallar",
   "modifier.tconstruct.luck": "Şans",
@@ -2656,7 +2656,7 @@
   "gui.tconstruct.tinker_station.repair_limited": "Onar ve Değiştir",
   "gui.tconstruct.tinker_station.repair_limited.description": "Bütün sıradan araçların yapılmasına ve çoğu değiştiricinin eklenmesine olanak sağlar. Başlamak için soldaki düğmelerden bir düzen seçin.",
   "gui.tconstruct.tinker_station.repair": "Onar ve Değiştir",
-  "gui.tconstruct.tinker_station.repair.description": "Küçük ve koca araçların ikisine de yapılabilir ve var olan araçlarına değişlik yapılabilir, böylece düşlerini bitirebilirsin! Başlamak için soldaki düğmelerden bir düzen seçin.",
+  "gui.tconstruct.tinker_station.repair.description": "Küçük ve koca araçların ikisine de yapılabilir ve düşlerini bitirmek için var olan araçlarına değişlik yapılabilir! Başlamak için soldaki düğmelerden bir düzen seçin.",
   "gui.tconstruct.tinker_station.modifiers": "Değiştiriciler",
   "gui.tconstruct.tinker_station.upgrades": "Yükseltmeler ve Yetenekler",
   "gui.tconstruct.tinker_station.traits": "Nitelikler",
