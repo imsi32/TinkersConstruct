@@ -2,14 +2,14 @@
   "modifier_id": "tconstruct:pierce",
   "text": [
     {
-      "text": "Arrows cancel out 1 point of armor per level."
+      "text": "Oklar, seviye başına 1 zırh puanını yok sayar."
     }
   ],
   "more_text_space": true,
   "tool_filter": "tconstruct:modifiable/ranged",
   "effects": [
-    "Can apply levels incrementally",
-    "Maximum of 3 levels",
-    "Requires 1 upgrade slot per level"
+    "Aşamalı olarak seviyeler uygulanabilir",
+    "En çok 3 seviye",
+    "Seviye başına 1 yükseltme yuvası gerekir"
   ]
 }
