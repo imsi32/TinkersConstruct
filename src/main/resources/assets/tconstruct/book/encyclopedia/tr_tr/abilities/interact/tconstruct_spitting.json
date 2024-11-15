@@ -2,17 +2,15 @@
   "modifier_id": "tconstruct:spitting",
   "text": [
     {
-      "text": "Charging up then release to launch fluid inflicting effects on the target and consuming 1 durability. Higher levels fire multiple shots and consume more durability."
-      "text": "Charging up then release to launch fluid inflicting effects on the target and consuming 1 durability. Higher levels fire multiple shots and consume more durability."
-
+      "text": "Yükleyip bırakmak hedefine etkilerini uygulaması için sıvı fırlatır ve 1 dayanıklılık tüketir. Seviye yükseldikçe çoklu atış yapar ve daha fazla dayanıklılık harcar."
     },
     {
-      "text": "Power boosts the effect and fluid consumption by 25% per level. Charge time is reduced by quick charge.", "paragraph": true
+      "text": "Seviye başına güç, sıvı tüketimi ile etkisini %25 artırır. Çekim hızı, çabuk çekiş ile azaltılır.", "paragraph": true
     }
   ],
   "more_text_space": true,
   "effects": [
-    "No max level",
-    "Requires 1 ability slot per level"
+    "En çok seviyesi yok",
+    "Seviye başına 1 yetenek yuvası gerekir."
   ]
 }
