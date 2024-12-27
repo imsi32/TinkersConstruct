@@ -1825,35 +1825,35 @@ public class SmelteryRecipeProvider extends BaseRecipeProvider implements ISmelt
     Consumer<FinishedRecipe> wrapped;
 
     // bronze
-    wrapped = withCondition(consumer, tagCondition("ingots/bronze"), tagCondition("ingots/tin"));
+    wrapped = withCondition(consumer, tagCondition("ingots/tin"));
     AlloyRecipeBuilder.alloy(TinkerFluids.moltenBronze.get(), FluidValues.INGOT * 4)
                       .addInput(TinkerFluids.moltenCopper.getForgeTag(), FluidValues.INGOT * 3)
                       .addInput(TinkerFluids.moltenTin.getForgeTag(), FluidValues.INGOT)
                       .save(wrapped, prefix(TinkerFluids.moltenBronze, folder));
 
     // brass
-    wrapped = withCondition(consumer, tagCondition("ingots/brass"), tagCondition("ingots/zinc"));
+    wrapped = withCondition(consumer, tagCondition("ingots/zinc"));
     AlloyRecipeBuilder.alloy(TinkerFluids.moltenBrass.get(), FluidValues.INGOT * 2)
                       .addInput(TinkerFluids.moltenCopper.getForgeTag(), FluidValues.INGOT)
                       .addInput(TinkerFluids.moltenZinc.getForgeTag(), FluidValues.INGOT)
                       .save(wrapped, prefix(TinkerFluids.moltenBrass, folder));
 
     // electrum
-    wrapped = withCondition(consumer, tagCondition("ingots/electrum"), tagCondition("ingots/silver"));
+    wrapped = withCondition(consumer, tagCondition("ingots/silver"));
     AlloyRecipeBuilder.alloy(TinkerFluids.moltenElectrum.get(), FluidValues.INGOT * 2)
                       .addInput(TinkerFluids.moltenGold.getForgeTag(), FluidValues.INGOT)
                       .addInput(TinkerFluids.moltenSilver.getForgeTag(), FluidValues.INGOT)
                       .save(wrapped, prefix(TinkerFluids.moltenElectrum, folder));
 
     // invar
-    wrapped = withCondition(consumer, tagCondition("ingots/invar"), tagCondition("ingots/nickel"));
+    wrapped = withCondition(consumer, tagCondition("ingots/nickel"));
     AlloyRecipeBuilder.alloy(TinkerFluids.moltenInvar.get(), FluidValues.INGOT * 3)
                       .addInput(TinkerFluids.moltenIron.getForgeTag(), FluidValues.INGOT * 2)
                       .addInput(TinkerFluids.moltenNickel.getForgeTag(), FluidValues.INGOT)
                       .save(wrapped, prefix(TinkerFluids.moltenInvar, folder));
 
     // constantan
-    wrapped = withCondition(consumer, tagCondition("ingots/constantan"), tagCondition("ingots/nickel"));
+    wrapped = withCondition(consumer, tagCondition("ingots/nickel"));
     AlloyRecipeBuilder.alloy(TinkerFluids.moltenConstantan.get(), FluidValues.INGOT * 2)
                       .addInput(TinkerFluids.moltenCopper.getForgeTag(), FluidValues.INGOT)
                       .addInput(TinkerFluids.moltenNickel.getForgeTag(), FluidValues.INGOT)
@@ -2212,24 +2212,6 @@ public class SmelteryRecipeProvider extends BaseRecipeProvider implements ISmelt
                             .setCast(Blocks.BRICK_WALL, true)
                             .setFluidAndTime(new FluidStack(Fluids.LAVA, FluidType.BUCKET_VOLUME / 10))
                             .save(ceramicsConsumer, location(castingFolder + "lava_bricks_wall"));
-
-    // golden bricks
-    ItemCastingRecipeBuilder.basinRecipe(ItemNameOutput.fromName(ceramicsId.apply("golden_bricks")))
-                            .setCast(ItemNameIngredient.from(ceramicsId.apply("porcelain_bricks")), true)
-                            .setFluidAndTime(TinkerFluids.moltenGold, true, FluidValues.NUGGET / 8)
-                            .save(ceramicsConsumer, location(castingFolder + "golden_bricks"));
-    ItemCastingRecipeBuilder.basinRecipe(ItemNameOutput.fromName(ceramicsId.apply("golden_bricks_slab")))
-                            .setCast(ItemNameIngredient.from(ceramicsId.apply("porcelain_bricks_slab")), true)
-                            .setFluidAndTime(TinkerFluids.moltenGold, true, FluidValues.NUGGET / 16)
-                            .save(ceramicsConsumer, location(castingFolder + "golden_bricks_slab"));
-    ItemCastingRecipeBuilder.basinRecipe(ItemNameOutput.fromName(ceramicsId.apply("golden_bricks_stairs")))
-                            .setCast(ItemNameIngredient.from(ceramicsId.apply("porcelain_bricks_stairs")), true)
-                            .setFluidAndTime(TinkerFluids.moltenGold, true, FluidValues.NUGGET / 8)
-                            .save(ceramicsConsumer, location(castingFolder + "golden_bricks_stairs"));
-    ItemCastingRecipeBuilder.basinRecipe(ItemNameOutput.fromName(ceramicsId.apply("golden_bricks_wall")))
-                            .setCast(ItemNameIngredient.from(ceramicsId.apply("porcelain_bricks_wall")), true)
-                            .setFluidAndTime(TinkerFluids.moltenGold, true, FluidValues.NUGGET / 8)
-                            .save(ceramicsConsumer, location(castingFolder + "golden_bricks_wall"));
 
     // refined glowstone composite
     Consumer<FinishedRecipe> wrapped = withCondition(consumer, tagCondition("ingots/refined_glowstone"), tagCondition("ingots/osmium"));

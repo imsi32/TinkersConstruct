@@ -287,8 +287,9 @@ public class IncrementalModifierRecipe extends AbstractModifierRecipe {
     }
   }
 
-  /** @deprecated use {@link slimeknights.tconstruct.library.utils.JsonUtils#getAsItemStack(JsonObject, String)} */
-  @Deprecated
+  /** @deprecated use {@link slimeknights.mantle.data.loadable.common.ItemStackLoadable#REQUIRED_STACK_NBT} */
+  @SuppressWarnings("removal")
+  @Deprecated(forRemoval = true)
   public static ItemStack deseralizeResultItem(JsonObject parent, String name) {
     return JsonUtils.getAsItemStack(parent, name);
   }

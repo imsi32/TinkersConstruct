@@ -37,6 +37,7 @@ import slimeknights.tconstruct.world.TinkerWorld;
 import java.util.function.Consumer;
 
 import static net.minecraft.tags.ItemTags.CLUSTER_MAX_HARVESTABLES;
+import static slimeknights.tconstruct.common.TinkerTags.Items.ANCIENT_TOOLS;
 import static slimeknights.tconstruct.common.TinkerTags.Items.AOE;
 import static slimeknights.tconstruct.common.TinkerTags.Items.ARMOR;
 import static slimeknights.tconstruct.common.TinkerTags.Items.BASIC_ARMOR;
@@ -82,6 +83,7 @@ import static slimeknights.tconstruct.common.TinkerTags.Items.SPECIAL_TOOLS;
 import static slimeknights.tconstruct.common.TinkerTags.Items.STAFFS;
 import static slimeknights.tconstruct.common.TinkerTags.Items.STONE_HARVEST;
 import static slimeknights.tconstruct.common.TinkerTags.Items.SWORD;
+import static slimeknights.tconstruct.common.TinkerTags.Items.TRADER_TOOLS;
 import static slimeknights.tconstruct.common.TinkerTags.Items.UNARMED;
 import static slimeknights.tconstruct.common.TinkerTags.Items.UNSALVAGABLE;
 import static slimeknights.tconstruct.common.TinkerTags.Items.WORN_ARMOR;
@@ -257,6 +259,10 @@ public class ItemTagProvider extends ItemTagsProvider {
     addToolTags(TinkerTools.earthStaff,    DURABILITY, STAFFS, SPECIAL_TOOLS, HELD_ARMOR, INTERACTABLE_DUAL, AOE, DYEABLE, EMBELLISHMENT_WOOD, BONUS_SLOTS);
     addToolTags(TinkerTools.ichorStaff,    DURABILITY, STAFFS, SPECIAL_TOOLS, HELD_ARMOR, INTERACTABLE_DUAL, AOE, DYEABLE, EMBELLISHMENT_WOOD, BONUS_SLOTS);
     addToolTags(TinkerTools.enderStaff,    DURABILITY, STAFFS, SPECIAL_TOOLS, HELD_ARMOR, INTERACTABLE_DUAL, AOE, DYEABLE, EMBELLISHMENT_WOOD, BONUS_SLOTS);
+    // ancient
+    addToolTags(TinkerTools.meltingPan, MULTIPART_TOOL, DURABILITY, ANCIENT_TOOLS, HARVEST_PRIMARY, STAFFS, HELD_ARMOR, INTERACTABLE_DUAL, AOE, BONUS_SLOTS);
+    addToolTags(TinkerTools.warPick,    MULTIPART_TOOL, DURABILITY, ANCIENT_TOOLS, HARVEST_PRIMARY, STONE_HARVEST, MELEE_WEAPON, HELD, AOE, CLUSTER_MAX_HARVESTABLES, CROSSBOWS, BONUS_SLOTS);
+    addToolTags(TinkerTools.battlesign, MULTIPART_TOOL, DURABILITY, ANCIENT_TOOLS, MELEE_PRIMARY, SHIELDS, BONUS_SLOTS);
 
     // armor
     addArmorTags(TinkerTools.travelersGear, DURABILITY, BONUS_SLOTS, GOLDEN_ARMOR, DYEABLE, ItemTags.FREEZE_IMMUNE_WEARABLES);
@@ -308,7 +314,7 @@ public class ItemTagProvider extends ItemTagsProvider {
     // interactable armor is mostly so some mod could disable all chestplate interactions in one swing
     this.tag(INTERACTABLE_ARMOR).addTag(CHESTPLATES);
     // left and right handed are held, but not armor
-    this.tag(HELD).addTags(INTERACTABLE_RIGHT, INTERACTABLE_LEFT);
+    this.tag(HELD).addTags(INTERACTABLE_RIGHT, INTERACTABLE_LEFT, HELD_ARMOR);
     this.tag(INTERACTABLE).addTags(INTERACTABLE_LEFT, INTERACTABLE_RIGHT, INTERACTABLE_ARMOR);
     this.tag(WORN_ARMOR).addTags(BOOTS, LEGGINGS, CHESTPLATES, HELMETS);
     this.tag(HELD_ARMOR).addTag(SHIELDS);
@@ -316,6 +322,7 @@ public class ItemTagProvider extends ItemTagsProvider {
     this.tag(AOE).addTag(BOOTS); // boot walk modifiers
     this.tag(RANGED).addTags(BOWS, STAFFS);
     this.tag(BOWS).addTags(LONGBOWS, CROSSBOWS);
+    this.tag(TRADER_TOOLS).addTag(ANCIENT_TOOLS);
 
     // general
     this.tag(MODIFIABLE).addTags(MULTIPART_TOOL, DURABILITY, MELEE, HARVEST, AOE, HELD, BONUS_SLOTS);

@@ -29,6 +29,7 @@ import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.common.config.Config;
 import slimeknights.tconstruct.common.data.AdvancementsProvider;
 import slimeknights.tconstruct.common.data.loot.GlobalLootModifiersProvider;
+import slimeknights.tconstruct.common.data.loot.LootTableInjectionProvider;
 import slimeknights.tconstruct.common.data.loot.TConstructLootTableProvider;
 import slimeknights.tconstruct.common.data.tags.BiomeTagProvider;
 import slimeknights.tconstruct.common.data.tags.BlockEntityTypeTagProvider;
@@ -49,6 +50,7 @@ import slimeknights.tconstruct.library.tools.layout.StationSlotLayoutLoader;
 import slimeknights.tconstruct.library.utils.Util;
 import slimeknights.tconstruct.plugin.DietPlugin;
 import slimeknights.tconstruct.plugin.ImmersiveEngineeringPlugin;
+import slimeknights.tconstruct.plugin.craftingtweaks.CraftingTweaksPlugin;
 import slimeknights.tconstruct.plugin.jsonthings.JsonThingsPlugin;
 import slimeknights.tconstruct.shared.TinkerClient;
 import slimeknights.tconstruct.shared.TinkerCommons;
@@ -86,6 +88,7 @@ public class TConstruct {
   /* Instance of this mod, used for grabbing prototype fields */
   public static TConstruct instance;
 
+  @SuppressWarnings("removal")
   public TConstruct() {
     instance = this;
 
@@ -114,8 +117,8 @@ public class TConstruct {
     TinkerModule.initRegisters();
     TinkerNetwork.setup();
     TinkerTags.init();
-    // init client logic
     TinkerBookIDs.registerCommandSuggestion();
+    // init client logic
     DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> TinkerClient::onConstruct);
 
     // compat
@@ -128,6 +131,9 @@ public class TConstruct {
     }
     if (modList.isLoaded("diet")) {
       DietPlugin.onConstruct();
+    }
+    if (modList.isLoaded("craftingtweaks")) {
+      CraftingTweaksPlugin.onConstruct();
     }
   }
 
@@ -154,6 +160,7 @@ public class TConstruct {
     datagenerator.addProvider(server, new TConstructLootTableProvider(datagenerator));
     datagenerator.addProvider(server, new AdvancementsProvider(datagenerator));
     datagenerator.addProvider(server, new GlobalLootModifiersProvider(datagenerator));
+    datagenerator.addProvider(server, new LootTableInjectionProvider(datagenerator));
   }
 
   /** Shared behavior between item and block missing mappings */

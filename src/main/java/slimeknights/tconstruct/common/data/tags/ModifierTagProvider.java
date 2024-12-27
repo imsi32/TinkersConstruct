@@ -10,6 +10,7 @@ import slimeknights.tconstruct.tools.data.ModifierIds;
 import static slimeknights.tconstruct.common.TinkerTags.Modifiers.ABILITIES;
 import static slimeknights.tconstruct.common.TinkerTags.Modifiers.ARMOR_ABILITIES;
 import static slimeknights.tconstruct.common.TinkerTags.Modifiers.ARMOR_UPGRADES;
+import static slimeknights.tconstruct.common.TinkerTags.Modifiers.BLOCK_WHILE_CHARGING;
 import static slimeknights.tconstruct.common.TinkerTags.Modifiers.BONUS_SLOTLESS;
 import static slimeknights.tconstruct.common.TinkerTags.Modifiers.BOOT_ABILITIES;
 import static slimeknights.tconstruct.common.TinkerTags.Modifiers.BOOT_UPGRADES;
@@ -69,10 +70,13 @@ public class ModifierTagProvider extends AbstractModifierTagProvider {
            ModifierIds.stripping, ModifierIds.tilling, ModifierIds.pathing,
            TinkerModifiers.shears.getId(), TinkerModifiers.harvest.getId())
       .addOptional(ModifierIds.pockets);
+    tag(BLOCK_WHILE_CHARGING)
+      .add(TinkerModifiers.flinging.getId(), TinkerModifiers.springing.getId(), TinkerModifiers.bonking.getId(), TinkerModifiers.warping.getId(),
+           TinkerModifiers.spitting.getId(), TinkerModifiers.zoom.getId());
     tag(SLIME_DEFENSE)
-      .add(TinkerModifiers.meleeProtection.getId(), TinkerModifiers.projectileProtection.getId(),
-           ModifierIds.fireProtection, TinkerModifiers.magicProtection.getId(),
-           TinkerModifiers.blastProtection.getId(), TinkerModifiers.golden.getId());
+      .add(ModifierIds.meleeProtection, ModifierIds.projectileProtection,
+           ModifierIds.fireProtection, ModifierIds.magicProtection,
+           ModifierIds.blastProtection, TinkerModifiers.golden.getId());
     tag(OVERSLIME_FRIEND)
       .add(TinkerModifiers.overgrowth.getId(), ModifierIds.overcast, TinkerModifiers.overlord.getId(),
            ModifierIds.overforced, ModifierIds.overslimeFriend, TinkerModifiers.overworked.getId());
@@ -90,7 +94,7 @@ public class ModifierTagProvider extends AbstractModifierTagProvider {
       ModifierIds.diamond, ModifierIds.emerald, ModifierIds.netherite,
       ModifierIds.reinforced, ModifierIds.overforced, ModifierIds.soulbound,
       ModifierIds.experienced, TinkerModifiers.magnetic.getId(), TinkerModifiers.zoom.getId(),
-      ModifierIds.tank, TinkerModifiers.fireprimer.getId())
+      ModifierIds.tank, ModifierIds.smelting, TinkerModifiers.fireprimer.getId())
         .addOptional(ModifierIds.theOneProbe);
 
     this.tag(MELEE_UPGRADES).add(
@@ -126,7 +130,7 @@ public class ModifierTagProvider extends AbstractModifierTagProvider {
       TinkerModifiers.dualWielding.getId(), TinkerModifiers.spilling.getId());
     this.tag(HARVEST_ABILITIES).add(TinkerModifiers.autosmelt.getId(), TinkerModifiers.exchanging.getId(), TinkerModifiers.silky.getId());
     this.tag(RANGED_ABILITIES).add(
-      TinkerModifiers.bulkQuiver.getId(), TinkerModifiers.trickQuiver.getId(),
+      ModifierIds.bulkQuiver, ModifierIds.trickQuiver,
       TinkerModifiers.crystalshot.getId(), TinkerModifiers.multishot.getId());
     this.tag(INTERACTION_ABILITIES).add(
       TinkerModifiers.bucketing.getId(), TinkerModifiers.firestarter.getId(), TinkerModifiers.glowing.getId(),
@@ -145,9 +149,9 @@ public class ModifierTagProvider extends AbstractModifierTagProvider {
 
     // defense
     this.tag(PROTECTION_DEFENSE).add(
-      TinkerModifiers.blastProtection.getId(), ModifierIds.fireProtection, TinkerModifiers.magicProtection.getId(),
-      TinkerModifiers.meleeProtection.getId(), TinkerModifiers.projectileProtection.getId(),
-      TinkerModifiers.dragonborn.getId(), TinkerModifiers.shulking.getId(), ModifierIds.turtleShell);
+      ModifierIds.blastProtection, ModifierIds.fireProtection, ModifierIds.magicProtection,
+      ModifierIds.meleeProtection, ModifierIds.projectileProtection,
+      ModifierIds.dragonborn, ModifierIds.shulking, ModifierIds.turtleShell);
     this.tag(SPECIAL_DEFENSE).add(TinkerModifiers.golden.getId(), ModifierIds.knockbackResistance, ModifierIds.revitalizing);
 
     // slotless

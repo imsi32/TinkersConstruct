@@ -45,9 +45,8 @@ public class Config {
 
     // loot
     public final BooleanValue slimyLootChests;
-    public final IntValue barterBlazingBlood;
-    public final IntValue tinkerToolBonusChest;
     public final BooleanValue dropDragonScales;
+    public final IntValue wandererAncientToolWeight;
 
     public final OreRate melterOreRate;
     public final OreRate smelteryOreRate;
@@ -206,18 +205,12 @@ public class Config {
         .comment("Adds slimy saplings and seeds into various loot chests. Helps for worlds without slime islands")
         .worldRestart()
         .define("slimy_loot", true);
-      barterBlazingBlood = builder
-        .comment("Weight of blazing blood in the piglin bartering tables. Set to 0 to disable")
-        .worldRestart()
-        .defineInRange("barter_blazing_blood", 20, 0, 100);
-      tinkerToolBonusChest = builder
-        .comment("Weight of tinker tools in the vanilla spawn bonus chest, randomly replacing the vanilla axe or shovel. Tool will have a random tier 1 head and binding, plus a wooden handle. Set to 0 to disable.",
-                 "For comparison, vanilla wooden axes and pickaxes have a weight of 3, and stone axes/pickaxes have a weight of 1")
-        .worldRestart()
-        .defineInRange("tinker_tool_bonus_chest", 2, 0, 25);
       dropDragonScales = builder
         .comment("If true, ender dragons will drop scales when damaged by explosions")
         .define("drop_dragon_Scales", true);
+      wandererAncientToolWeight = builder
+        .comment("Weight of the ancient tool trade for the wandering trader. All traders randomly choose 1 rare trade, so this is roughly the chance the trade occurs compared to the vanilla options (of which there are 6).")
+        .defineInRange("wanderer_ancient_tool_weight", 6, 0, 100);
 
       builder.pop();
 

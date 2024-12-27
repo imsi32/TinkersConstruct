@@ -32,6 +32,7 @@ public class ModifierIds {
   public static final ModifierId offhanded  = id("offhanded");
   public static final ModifierId theOneProbe = id("the_one_probe");
   public static final ModifierId soulbound = id("soulbound");
+  public static final ModifierId smelting = id("smelting");
   // general abilities
   public static final ModifierId reach = id("reach");
 
@@ -62,11 +63,19 @@ public class ModifierIds {
   public static final ModifierId quickCharge = id("quick_charge");
   public static final ModifierId trueshot = id("trueshot");
   public static final ModifierId blindshot = id("blindshot");
+  public static final ModifierId bulkQuiver = id("bulk_quiver");
+  public static final ModifierId trickQuiver = id("trick_quiver");
 
   // armor
   public static final ModifierId protection = id("protection");
+  public static final ModifierId meleeProtection = id("melee_protection");
   public static final ModifierId fireProtection = id("fire_protection");
+  public static final ModifierId projectileProtection = id("projectile_protection");
+  public static final ModifierId blastProtection = id("blast_protection");
+  public static final ModifierId magicProtection = id("magic_protection");
   public static final ModifierId turtleShell = id("turtle_shell");
+  public static final ModifierId shulking = id("shulking");
+  public static final ModifierId dragonborn = id("dragonborn");
   public static final ModifierId wings = id("wings");
   public static final ModifierId knockbackResistance = id("knockback_resistance");
   // counter
@@ -107,7 +116,6 @@ public class ModifierIds {
   public static final ModifierId overslimeFriend = id("overslime_friend");
   public static final ModifierId snowBoots = id("snow_boots");
 
-
   // traits - tier 1
   public static final ModifierId cultivated = id("cultivated");
   public static final ModifierId stringy = id("stringy");
@@ -116,6 +124,7 @@ public class ModifierIds {
   public static final ModifierId enderclearance = id("enderclearance");
   // traits - tier 2
   public static final ModifierId sturdy = id("sturdy");
+  public static final ModifierId searing = id("searing");
   public static final ModifierId scorching = id("scorching");
   public static final ModifierId antitoxin = id("antitoxin");
   public static final ModifierId airborne = id("airborne");
